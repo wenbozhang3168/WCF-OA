@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cellPhoneReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="50" uuid="76b39831-da10-48a3-a93e-f78c60590200">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="140"/>
+	<property name="ireport.callouts" value="##Fri Mar 30 16:17:30 NPT 2012"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="dataset1" uuid="cfbd4afd-9f14-45f3-9b85-627559b12e3e"/>
+	<subDataset name="Table Dataset 1" uuid="bcf9e34a-53d0-43fa-8ab1-b1ab342dd441"/>
+	<subDataset name="Table Dataset 2" uuid="5234128b-82af-47e1-bf2c-302fe14d92b3"/>
+	<subDataset name="Dataset1" uuid="35415310-82e6-4005-8de0-6f2c7d78b30b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="customerName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="customerEmail" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="invoiceNumber" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="invoiceAmount" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="invoiceDate" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="poNumber" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="paymentType" class="java.lang.String" isForPrompting="false"/>
+	<field name="itemNo" class="java.lang.String"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="price" class="java.lang.Double"/>
+	<field name="qty" class="java.lang.Integer"/>
+	<field name="lineTotal" class="java.lang.Double"/>
+	<group name="Total">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="4"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="44">
+				<line>
+					<reportElement x="0" y="9" width="531" height="1" uuid="7d7bd0da-fa74-4462-9339-d6dcfd994533"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="39" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="113" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="-30" width="533" height="130" forecolor="#000000" backcolor="#C7D8ED" uuid="1a903980-bfc5-4c3c-9bd1-f8fb07540677"/>
+				<graphicElement>
+					<pen lineColor="#666666"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="-20" width="128" height="20" uuid="6e018db9-3e1d-4301-9d0b-78a469af2120"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Run Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="128" height="20" uuid="09609a7c-feb8-4155-8564-de4a1731faac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of Phones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="-10" width="128" height="20" uuid="ff629ac6-84f0-47cd-af5c-41f53d54caa1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Minutes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="20" width="128" height="20" uuid="86fe63a6-5540-42c9-9b0c-e0e0c3db3a61"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Data:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="-10" width="88" height="20" uuid="e0d0ca40-a24e-428b-8fa1-0ad635426124"/>
+				<textFieldExpression><![CDATA[$P{paymentType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="20" width="88" height="20" uuid="2f0471ea-be7b-4a20-81ad-ec02c763ab1b"/>
+				<textFieldExpression><![CDATA[$P{poNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="-20" width="88" height="20" uuid="4e901e39-9ae6-4c48-9d36-c450ff6e830a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="160" y="10" width="88" height="20" uuid="b17407ac-d26f-4b09-a063-27f91f0fe461"/>
+				<textFieldExpression><![CDATA[$P{invoiceDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-59" width="553" height="29" forecolor="#B9B9B9" uuid="c1493571-6fd8-4a0f-b3f1-650f51988907"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company CellPhone Usage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="40" width="128" height="20" uuid="d2223eb9-521b-4549-9c37-3e6f99be5ee8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Average Minutes:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="46" width="88" height="20" uuid="b4c2cbbb-2ec8-4d03-be98-0b5db3794628"/>
+				<textFieldExpression><![CDATA[$P{poNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="75" width="128" height="20" uuid="3f13d17e-37ed-494c-91f3-1d42de245225"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Average Data:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="75" width="88" height="20" uuid="853cb2fd-900a-4f43-a86d-cd8e109ac325"/>
+				<textFieldExpression><![CDATA[$P{poNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="5" width="531" height="20" backcolor="#C0D4EC" uuid="f3502e14-dad2-4168-8bee-b4aa64ed7061"/>
+				<graphicElement>
+					<pen lineColor="#666666"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="7" width="50" height="20" uuid="41c0d341-75e4-4841-b063-7d8cefc02f95"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Employee Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="7" width="116" height="20" uuid="63e4aa7c-abf1-4d74-8caa-029896de521f"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="7" width="80" height="20" uuid="b037a000-724f-477a-8584-73e84c2c2b15"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="7" width="80" height="20" uuid="be5174a2-9ab6-401c-9e9e-5b6dcd319109"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Purchase Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="7" width="79" height="13" uuid="e0884214-0588-4037-9625-032c493b7412"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Minutes Usage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="7" width="79" height="18" uuid="4e025c00-65a4-45c1-b5ee-2d41fcc97f72"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data Usage]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="211" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="8" width="54" height="20" uuid="07027efe-ec8d-4970-8999-ca4b389ecc1a"/>
+				<textFieldExpression><![CDATA[$F{itemNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="8" width="104" height="20" uuid="b6052cdd-bc11-45fb-9f16-c531b23827ce"/>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="8" width="57" height="20" uuid="493c1860-0be6-4a08-9239-2106690904a0"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="8" width="75" height="20" uuid="188cc3fb-823e-4b0b-9503-f54886355931"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="8" width="64" height="20" uuid="acf6bfa3-e850-4205-9894-dff90e9df813"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{lineTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="10" width="64" height="20" uuid="117e0a0f-33bd-4de3-8c3c-aa9bbe59b286"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{lineTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
